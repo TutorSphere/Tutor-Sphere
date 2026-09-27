@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tutor Sphere | Find the Right Tutor</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf5;
+    color: #263238;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa, #ec407a);
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    min-height: 570px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(135deg, #fce4ec, #fff3e0, #e8eaf6);
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ec407a;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 25px;
+    margin: 6px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: #8e24aa;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.button:hover {
+    background: #6a1b9a;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #128C7E;
+}
+
+.hero-card {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    width: 330px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.hero-card h2 {
+    color: #8e24aa;
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    color: #6a1b9a;
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-top: 5px solid #ec407a;
+}
+
+.card h3 {
+    color: #6a1b9a;
+    margin-bottom: 12px;
+}
+
+.card .icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about {
+    background: #f3e5f5;
+}
+
+.join {
+    background: linear-gradient(135deg, #fff3e0, #fce4ec);
+}
+
+.form-box {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form-box button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact {
+    text-align: center;
+    background: #6a1b9a;
+    color: white;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact a {
+    color: white;
+}
+
+footer {
+    background: #35104d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🎓 Tutor Sphere</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#subjects">Subjects</a>
+<a href="#tutors">Tutors</a>
+<a href="#join">Join Us</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Welcome to <span>Tutor Sphere</span></h1>
+
+<p>
+Connecting students and parents with dedicated tutors for
+quality school education.
+</p>
+
+<p>
+📚 Classes 1–10 &nbsp; | &nbsp;
+🏫 CBSE • ICSE • IGCSE
+</p>
+
+<a class="button" href="#join">Find a Tutor</a>
+
+<a class="button whatsapp"
+href="https://wa.me/918744945389"
+target="_blank">
+💬 WhatsApp Us
+</a>
+
+</div>
+
+
+<div class="hero-card">
+
+<h2>Need a Tutor?</h2>
+
+<p>
+Looking for a reliable tutor for your child?
+Contact Tutor Sphere and tell us what you need.
+</p>
+
+<br>
+
+<a class="button whatsapp"
+href="https://wa.me/918744945389"
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<section id="subjects">
+
+<h2 class="section-title">What We Offer</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>School Tuition</h3>
+<p>
+Personalised tuition support for students from Class 1 to 10.
+</p>
+</div>
+
+
+<div class="card">
+<div class="icon">🧮</div>
+<h3>Multiple Subjects</h3>
+<p>
+English, Mathematics, Science, Social Science and Economics.
+</p>
+</div>
+
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Online Learning</h3>
+<p>
+Connect with tutors online from the comfort of your home.
+</p>
+</div>
+
+
+<div class="card">
+<div class="icon">👩‍🏫</div>
+<h3>Experienced Tutors</h3>
+<p>
+Connect with dedicated tutors who are passionate about teaching.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about">
+
+<h2 class="section-title">Why Tutor Sphere?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Personal Attention</h3>
+<p>
+We believe every student deserves individual attention and guidance.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Flexible Options</h3>
+<p>
+Choose online or offline tutoring according to your requirements.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Parent Friendly</h3>
+<p>
+We make it simple for parents to connect with suitable tutors.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="tutors">
+
+<h2 class="section-title">For Parents & Students</h2>
+
+<div class="form-box">
+
+<p style="text-align:center; margin-bottom:20px;">
+Tell us what kind of tutor you are looking for.
+</p>
+
+<form onsubmit="sendParentMessage(); return false;">
+
+<input id="parentName"
+type="text"
+placeholder="Parent / Student Name"
+required>
+
+<input id="className"
+type="text"
+placeholder="Class / Grade"
+required>
+
+<input id="subject"
+type="text"
+placeholder="Subject Required"
+required>
+
+<input id="location"
+type="text"
+placeholder="Location / Area">
+
+<textarea id="requirement"
+rows="4"
+placeholder="Tell us about your tuition requirement"></textarea>
+
+<button class="button whatsapp" type="submit">
+Send Requirement on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section class="join" id="join">
+
+<h2 class="section-title">Are You a Tutor?</h2>
+
+<div class="form-box">
+
+<p style="text-align:center; margin-bottom:20px;">
+Join Tutor Sphere and connect with students and parents
+looking for tuition support.
+</p>
+
+<form onsubmit="sendTutorMessage(); return false;">
+
+<input id="tutorName"
+type="text"
+placeholder="Your Name"
+required>
+
+<input id="tutorSubjects"
+type="text"
+placeholder="Subjects You Teach"
+required>
+
+<input id="tutorClasses"
+type="text"
+placeholder="Classes You Teach"
+required>
+
+<input id="tutorLocation"
+type="text"
+placeholder="Your Location">
+
+<textarea id="tutorExperience"
+rows="4"
+placeholder="Tell us briefly about your teaching experience"></textarea>
+
+<button class="button" type="submit">
+Join as a Tutor
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2>Contact Tutor Sphere</h2>
+
+<p>
+📱 WhatsApp: 
+<a href="https://wa.me/918744945389" target="_blank">
++91 87449 45389
+</a>
+</p>
+
+<br>
+
+<a class="button whatsapp"
+href="https://wa.me/918744945389"
+target="_blank">
+💬 Message Us on WhatsApp
+</a>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Tutor Sphere. All Rights Reserved.</p>
+
+<p>Connecting Students, Parents & Tutors.</p>
+
+</footer>
+
+
+<script>
+
+function sendParentMessage() {
+
+let name = document.getElementById("parentName").value;
+let className = document.getElementById("className").value;
+let subject = document.getElementById("subject").value;
+let location = document.getElementById("location").value;
+let requirement = document.getElementById("requirement").value;
+
+let message =
+"Hello Tutor Sphere,%0A%0A" +
+"I am looking for a tutor.%0A%0A" +
+"Name: " + name + "%0A" +
+"Class: " + className + "%0A" +
+"Subject: " + subject + "%0A" +
+"Location: " + location + "%0A" +
+"Requirement: " + requirement;
+
+window.open(
+"https://wa.me/918744945389?text=" + message,
+"_blank"
+);
+
+}
+
+
+function sendTutorMessage() {
+
+let name = document.getElementById("tutorName").value;
+let subjects = document.getElementById("tutorSubjects").value;
+let classes = document.getElementById("tutorClasses").value;
+let location = document.getElementById("tutorLocation").value;
+let experience = document.getElementById("tutorExperience").value;
+
+let message =
+"Hello Tutor Sphere,%0A%0A" +
+"I would like to join as a tutor.%0A%0A" +
+"Name: " + name + "%0A" +
+"Subjects: " + subjects + "%0A" +
+"Classes: " + classes + "%0A" +
+"Location: " + location + "%0A" +
+"Experience: " + experience;
+
+window.open(
+"https://wa.me/918744945389?text=" + message,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
